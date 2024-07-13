@@ -5,3 +5,19 @@ body {
 .active-box div {
   opacity: 100;
 }
+
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+ 
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #6EABCE;
+  border-radius: 10px;
+}

@@ -30,8 +30,8 @@ function App() {
   }
 
   return (
-    <div className="flex items-center justify-center w-full h-screen px-[20px] xl:px-0">
-      <div className='flex justify-center h-[720px] w-full lg:w-[1000px] rounded-[48px] bg-black p-[40px_20px] md:p-[40px_90px] lg:p-[40px_140px]'>
+    <div className="flex items-center justify-center w-full h-screen p-[20px] xl:p-0">
+      <div className='flex justify-center h-full max-h-[720px] w-full lg:w-[1000px] rounded-[48px] bg-black p-[40px_20px] md:p-[40px_90px] lg:p-[40px_140px]'>
         <div className='flex flex-col items-center gap-[30px] overflow-y-hidden h-full w-full'>
           <div className="flex flex-col items-center gap-[20px] w-full">
             <h1 className='font-bold text-[32px] text-blue text-center'>To-Do List App</h1>
