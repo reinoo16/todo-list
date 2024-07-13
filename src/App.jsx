@@ -3,7 +3,6 @@ import './App.css';
 import bin from './images/bin.png'
 
 function App() {
-  const [boxActive, setBoxActive] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
@@ -24,6 +23,12 @@ function App() {
     ))
   }
 
+  const enterAddTask = (event) => {
+    if (event.key === 'Enter') {
+      addTask();
+    }
+  }
+
   return (
     <div className="flex items-center justify-center w-full h-screen px-[20px] xl:px-0">
       <div className='flex justify-center h-[720px] w-full lg:w-[1000px] rounded-[48px] bg-black p-[40px_20px] md:p-[40px_90px] lg:p-[40px_140px]'>
@@ -32,7 +37,7 @@ function App() {
             <h1 className='font-bold text-[32px] text-blue text-center'>To-Do List App</h1>
             <div className='flex flex-col-reverse gap-[10px] items-center relative w-full'>
               <button onClick={addTask} className='outline-none sm:absolute sm:right-[5px] sm:top-[50%] sm:translate-y-[-50%] p-[10px_49px] bg-blue sm:bg-black text-[16px] font-bold text-black sm:text-blue rounded-[22px]'>Ekle</button>
-              <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Görev adı girin' className='outline-none text-[16px] placeholder:text-blackv2 font-normal w-full h-[50px] rounded-[22px] bg-blue px-[20px] sm:pl-[30px] sm:pr-[169px]' type="text" />
+              <input onKeyDown={enterAddTask} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Görev adı girin' className='outline-none text-[16px] placeholder:text-blackv2 font-normal w-full h-[50px] rounded-[22px] bg-blue px-[20px] sm:pl-[30px] sm:pr-[169px]' type="text" />
             </div>
           </div>
           <ul className="flex flex-col gap-[14px] w-full px-[12px] overflow-y-auto overflow-x-hidden h-full sm:px-[30px]">
